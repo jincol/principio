@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat',sans-serif;
+    background: #171115;
+    color: #fff;
+}
+
+
+body::before,body::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    width: 15rem;
+    aspect-ratio: 1/1;
+    filter: blur(50px);
+    background: #650859;
+}
+
+body::before{
+    top: -5rem;left: -5rem;
+}
+body::after{
+    top: unset;left: unset;
+    bottom: -5rem;right: -5rem;
+}
+
+.caja__cabecera{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 1rem;
+    padding-inline: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+
+
+.image__logo{
+    width: 5rem;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.image__logo:hover{
+    filter:drop-shadow( .05rem .1rem .1rem #ff6aeb);
+}
+
+.caja__navegacion {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caja__navegacion a{
+    color: #fff;
+    text-decoration: none;
+    color: inherit;
+    font-size: .9rem;
+    text-transform: capitalize;
+    border-radius: 100vw;
+    padding: .5rem 1rem;
+    transition: .3s ease;
+}
+
+.caja__navegacion a:hover ,.active{
+    background: #7522a2;
+}
+
+.mainimg{
+        position: absolute;
+        top: 11rem;
+        width: 37rem;
+        bottom: 0;
+        right: 3rem;
+}
+
+.dots{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8rem;
+}
+
+.leftdots{
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+}
+
+.rounded_star{
+   position: absolute;
+   left: 40%;
+   top: 20%;
+   opacity: .1;
+   animation: updown .5s linear infinite alternate;
+}
+
+.container__asaid{
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.asaid__text{
+    transform: rotate(90deg);
+    margin-block: 2rem;
+}
+
+.arrow{
+    width: 2rem;
+    animation: updown .5s linear infinite alternate;
+}
+
+@keyframes updown {
+    100%{transform: translateY(2rem);}
+}
+
+.asaid__socialicon{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.icon_social{
+    border: thin solid white;
+    border-radius: 50%;
+    padding: .2rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #650859;
+    transition: .5s ease  ;
+}
+
+.icon_social:hover{
+    cursor: pointer;
+    background-color: #650859;
+    color: #fff;
+}
+
+.container-content{
+    position: absolute;
+    left: 10rem;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content__tittle{
+    font-size: 3rem;
+}
+
+.content__tittle:before,.content__tittle::after{
+    content: '';
+    position: absolute;
+    background: url('./assets/rounded-star.png') center center / cover;
+    width: 3rem;aspect-ratio: 1/1;
+    top: -2rem;
+}
+
+.content__tittle::after{
+    top: unset;
+    bottom: -2rem;
+}
+
+.buttom{
+    background-color: transparent;
+    border: medium solid #650859;
+    color: #fff;
+    border-radius: 1rem;
+    padding: .3rem .8rem;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.buttom:hover{
+    background-color: #650859;
+}
+
+.buttom:active{
+    background-color: #ff6aeb;
+}
